@@ -10,10 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/image": "^0.17.2",
     "@astrojs/preact": "^2.2.1",
     "@astrojs/rss": "^2.4.3",
     "astro": "^2.9.2",
-    "preact": "^10.16.0"
+    "preact": "^10.16.0",
+    "sharp": "^0.32.4"
   },
   "devDependencies": {
     "prettier": "^3.0.0",
