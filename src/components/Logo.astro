@@ -1,0 +1,11 @@
+---
+import { Image, Picture } from '@astrojs/image/components';
+import CyberLogo from '../assets/cyber-logo.svg';
+---
+
+<Picture
+  src={CyberLogo}
+  widths={[153, 153, 153]}
+  sizes="(max-width: 800px) 153px, 153px"
+  alt="descriptive text"
+/>
