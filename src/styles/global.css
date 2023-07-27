@@ -1,6 +1,11 @@
+:root {
+  --main-font-family: "Inter";
+  --primary-font-family: "Karla";
+}
+
 html {
   background-color: hsl(210, 40%, 96%);
-  font-family: "Inter";
+  font-family: var(--main-font-family);
 }
 
 html.dark {
@@ -15,8 +20,6 @@ html.dark {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
   line-height: 1.5;
 }
 
@@ -27,9 +30,18 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+  font-family: var(--primary-font-family);
 }
 
 /* nav styles */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 82px;
+  background: rgba(17, 27, 36, 0.4);
+  backdrop-filter: blur(37.5px);
+}
 
 .hamburger {
   padding-right: 20px;
@@ -70,6 +82,11 @@ a:focus {
 
 .expanded {
   display: unset;
+}
+@media screen and (max-width: 1060px) and (min-width: 636px) {
+  nav {
+    display: inline-flex;
+  }
 }
 
 @media screen and (min-width: 636px) {
