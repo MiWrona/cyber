@@ -1,10 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting.jsx';
+import Hero from '../components/hero.astro';
+import HeroBackground from '../assets/hero-background.png';
+import { Image, Picture } from '@astrojs/image/components';
 const pageTitle = "Home Page";
+
+
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
-  
+<BaseLayout>
+  <Hero 
+    subheadline="COIG S.A" 
+    headline="COIG CYBER" 
+    headlineAccent="Security" 
+    description="Chroń swoją firmę dzięki dedykowanym rozwiązaniom bezpieczeństwa"
+     />  
+
+     <Picture
+     src={HeroBackground}
+     widths={[153, 153, 153]}
+     sizes="(max-width: 800px) 153px, 153px"
+     alt="descriptive text"
+   />
 </BaseLayout>
