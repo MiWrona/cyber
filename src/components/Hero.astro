@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
-import Picture from '@astrojs/image/components';
-import { Image, Picture } from '@astrojs/image/components';
+import Image  from '@astrojs/image/components';
 
 const { subheadline, headline, headlineAccent, description, imageSrc, imageWidths, imageSizes, imageAlt} = Astro.props;
 ---
@@ -60,10 +59,10 @@ const { subheadline, headline, headlineAccent, description, imageSrc, imageWidth
     <h1 class="headline">{headline} <span class="headline--accent">{headlineAccent}</span></h1>
     <p class="description">{description}</p>
 
-    <!-- <Picture
+    <Image
         src={imageSrc}
         widths={[{imageWidths}]}
         sizes={imageSizes}
         alt={imageAlt}
-    /> -->
+    />
 </div>
