@@ -7,7 +7,23 @@ const pageTitle = "Home Page";
 
 
 ---
+
+<style>
+.hero {
+  display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+img.hero__image {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+</style>
 <BaseLayout>
+  <section class="hero">
   <Hero 
     subheadline="COIG S.A" 
     headline="COIG CYBER" 
@@ -15,10 +31,11 @@ const pageTitle = "Home Page";
     description="Chroń swoją firmę dzięki dedykowanym rozwiązaniom bezpieczeństwa"
      />  
 
-     <Picture
-     src={HeroBackground}
-     widths={[153, 153, 153]}
-     sizes="(max-width: 800px) 153px, 153px"
-     alt="descriptive text"
-   />
+     <Picture class="hero__image"
+  src={HeroBackground}
+  widths={[352, 453, 453]}
+  sizes="(max-width: 800px) 453px, 453px"
+  alt="descriptive text"
+/>
+    </section>
 </BaseLayout>

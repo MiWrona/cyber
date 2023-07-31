@@ -11,6 +11,7 @@ const { subheadline, headline, headlineAccent, description, imageSrc, imageWidth
 
 .hero-wrapper {
     text-transform: uppercase;
+    padding-left: 60px;
 }
 
 .subheader {
@@ -58,11 +59,4 @@ const { subheadline, headline, headlineAccent, description, imageSrc, imageWidth
     <p class="subheader">{subheadline} </p>
     <h1 class="headline">{headline} <span class="headline--accent">{headlineAccent}</span></h1>
     <p class="description">{description}</p>
-
-    <Image
-        src={imageSrc}
-        widths={[{imageWidths}]}
-        sizes={imageSizes}
-        alt={imageAlt}
-    />
 </div>
