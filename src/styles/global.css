@@ -39,11 +39,12 @@ h1 {
 /* nav styles */
 
 nav {
-  display: flex;
-  justify-content: space-between;
   padding: 20px 82px;
-  background: rgba(17, 27, 36, 0.4);
+  background: #111b2450;
   backdrop-filter: blur(37.5px);
+  position: fixed;
+  z-index: 3;
+  width: 100%;
 }
 
 .hamburger {
@@ -74,6 +75,7 @@ nav {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  text-decoration: none;
 }
 
 .nav-links a:hover,
@@ -107,4 +109,19 @@ a:focus {
   .hamburger {
     display: none;
   }
+}
+
+/* ueseful */
+.description {
+  font-family: var(--main-font-family);
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 8.5px;
+  text-transform: uppercase;
+}
+
+.description--bold {
+  font-weight: 800;
 }

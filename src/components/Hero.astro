@@ -30,15 +30,6 @@ const { subheadline, headline, headlineAccent, description, imageSrc, imageWidth
     font-weight: 700;
 }
 
-.description {
-    font-family: var(--main-font-family);
-    color: var(--main-color);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    letter-spacing: 8.5px;
-    text-transform: uppercase;
-}
 
 @media screen and (max-width: 636px) {
     .headline {
@@ -59,4 +50,6 @@ const { subheadline, headline, headlineAccent, description, imageSrc, imageWidth
     <p class="subheader">{subheadline} </p>
     <h1 class="headline">{headline} <span class="headline--accent">{headlineAccent}</span></h1>
     <p class="description">{description}</p>
+
+    <slot />
 </div>

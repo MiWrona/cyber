@@ -9,17 +9,22 @@ const pageTitle = "Home Page";
 ---
 
 <style>
+
+
 .hero {
   display: flex;
-    width: 100%;
-    justify-content: space-between;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
 }
 
-img.hero__image {
+.hero__image-wrapper {
   position: absolute;
-  z-index: 1;
   top: 0;
+  right: 0;
 }
+
+
 
 </style>
 <BaseLayout>
@@ -28,14 +33,38 @@ img.hero__image {
     subheadline="COIG S.A" 
     headline="COIG CYBER" 
     headlineAccent="Security" 
-    description="Chroń swoją firmę dzięki dedykowanym rozwiązaniom bezpieczeństwa"
-     />  
-
+    description="Chroń swoją firmę dzięki dedykowanym rozwiązaniom"
+    > 
+    <p class="description description--bold"> Bepieczeństwa</p>
+  </Hero>  
+  <div class="hero__image-wrapper">
      <Picture class="hero__image"
-  src={HeroBackground}
-  widths={[352, 453, 453]}
-  sizes="(max-width: 800px) 453px, 453px"
-  alt="descriptive text"
-/>
+        src={HeroBackground}
+        widths={[352, 352, 352]}
+        sizes="(max-width: 800px) 453px, 352px"
+        alt="descriptive text"
+      />
+  </div>
     </section>
+    <section class="hero">
+      <Hero 
+        subheadline="COIG S.A" 
+        headline="COIG CYBER" 
+        headlineAccent="Security" 
+        description="Chroń swoją firmę dzięki dedykowanym rozwiązaniom"
+        > 
+        <p class="description"> Bepieczeństwa</p>
+      </Hero>  
+        </section>
+        <section class="hero">
+          <Hero 
+            subheadline="COIG S.A" 
+            headline="COIG CYBER" 
+            headlineAccent="Security" 
+            description="Chroń swoją firmę dzięki dedykowanym rozwiązaniom"
+            > 
+            <p class="description"> Bepieczeństwa</p>
+          </Hero>  
+            </section>
+
 </BaseLayout>
