@@ -3,6 +3,7 @@
   --primary-font-family: "Karla";
   --main-color: #fff;
   --primary-color: #00eac7;
+  --tetriary-color: #bccbd6;
 }
 
 html {
@@ -124,4 +125,97 @@ a:focus {
 
 .description--bold {
   font-weight: 800;
+}
+
+.subheader,
+.headline,
+.description {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.subheader {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+.headline {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--main-color);
+}
+
+.headline--small {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 23.4px; /* 137.647% */
+  letter-spacing: 0.9px;
+}
+
+.headline--accent {
+  display: block;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.headline--bold {
+  font-weight: bold;
+}
+
+.headline-secondary {
+  color: var(--main-color);
+  font-family: var(--main-font-family);
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 39.44px; /* 119.515% */
+  letter-spacing: 0.85px;
+}
+.headline--underline {
+  position: relative;
+}
+
+.headline--underline::after {
+  content: "";
+  width: 64px;
+  height: 2px;
+  /* background-color: var(--c-title-underline-color); */
+  background: var(--primary-color);
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+
+.paragraph {
+  color: var(--tetriary-color);
+  font-family: var(--primary-font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 27px; /* 150% */
+  letter-spacing: 0.64px;
+}
+.paragraph--small {
+  font-size: 14px;
+  line-height: 21.12px; /* 150% */
+  letter-spacing: 0.64px;
+}
+
+@media screen and (max-width: 636px) {
+  .headline {
+    font-size: 42px;
+  }
+
+  .headline--small {
+    font-size: 15px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+/* Helpers */
+.margin-top-30 {
+  margin-top: 30px;
 }

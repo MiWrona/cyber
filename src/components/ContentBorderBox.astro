@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+// const { headline, headlineAccent, description, image, imageAlt} = Astro.props;
+const props = Astro.props;
+---
+
+<style>
+
+.content-box {
+    width: 323px;
+    margin-right: 20px;
+    margin-bottom: 18px;
+}
+
+.content-box--bordered {
+    border: solid 1px #00EAC7;
+}
+
+.content-box-insides {
+    padding: 23px;
+}
+
+.content-box-icon {
+    width: 51px;
+    height: 51px;
+    margin-bottom: 10px;
+    margin-top: 35px;
+}
+
+
+</style>
+
+<div class="content-box content-box--bordered">
+    <div class="content-box-insides">
+        <img class="content-box-icon" src={props.image} alt={props.imageAlt} />
+        <h4 class="headline headline--small">{props.headline}</h2>
+        <p class="paragraph paragraph--small">{props.description}</p>
+        <span> Button</span>
+    </div> 
+</div>
