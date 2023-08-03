@@ -199,6 +199,9 @@ a:focus {
   line-height: 21.12px; /* 150% */
   letter-spacing: 0.64px;
 }
+.paragraph--bold {
+  font-weight: bold;
+}
 
 @media screen and (max-width: 636px) {
   .headline {

@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+
+// const { headline, headlineAccent, description, image, imageAlt} = Astro.props;
+const props = Astro.props;
+---
+
+<style>
+
+.icon-content-box {
+    position: relative;
+    min-width: 209px;
+    height: 84px;
+    margin: 25px;
+}
+
+.content-box--bordered {
+    border: 1px solid #00EAC7;
+    
+}
+
+.content-box-insides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 54px;
+
+}
+
+.content-box-insides-wrapper {
+    max-height: 54px;
+    margin-top: 13px;
+}
+
+.content-box-icon {
+    width: 31px;
+    height: 31px;
+    margin-right: 20px;
+}
+
+.icon-description {
+    color: #FFF;
+    font-family: Karla;
+    font-size: 18px;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 120px;
+}
+
+
+</style>
+
+<div class="icon-content-box content-box--bordered">
+    <div class="content-box-insides-wrapper">
+        <div class="content-box-insides">
+            <img class="content-box-icon" src={props.image} alt={props.imageAlt} />
+            <p class="icon-description">{props.headline}</p>
+        </div> 
+    </div>
+</div>

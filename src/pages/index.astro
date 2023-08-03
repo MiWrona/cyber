@@ -5,6 +5,7 @@ import HeroBackground from '../assets/hero-background.png';
 import CyberPadlock from '../assets/cyber-padlock.png';
 import { Image, Picture } from '@astrojs/image/components';
 import TwoColRow from '../components/TwoColRow.astro';
+import CenteredCol from '../components/CenteredCol.astro';
 const pageTitle = "Home Page";
 
 
@@ -60,6 +61,14 @@ const pageTitle = "Home Page";
       image={CyberPadlock.src}
       />
 
+    </section>
+    <section>
+      <CenteredCol
+      headline="i jej zagrożenia" 
+      headlineAccent="Sieć", 
+      description="We współczesnej gospodarce informacja jest nie tylko zasobem ekonomicznym niezbędnym do funkcjonowania ale współdecyduje o potencjale ekonomicznym i możliwościach rozwojowych."
+      descriptionSecond="Gromadzenie i przetwarzanie danych w formie elektronicznej powoduje, że są one podatne na nowy rodzaj zagrożeń ze strony cyberprzestępców. Nie ma dziś rozwiązań, które zagwarantują pełne bezpieczeństwo informacji, ale my wiemy jak zapewnić ich najwyższą ochronę."
+      descriptionThird="Bezpieczeństwo informatyczne to zapewnienie:" />
     </section>
 
 </BaseLayout>

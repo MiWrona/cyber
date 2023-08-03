@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+import IconBorderBox from './IconBorderBox.astro';
+import PasswordIcon from '../assets/password-icon.svg'
+import RocketIcon from '../assets/rocket-icon.svg'
+import SocialIcon from '../assets/diagram-icon.svg'
+import DiagramdIcon from '../assets/social-media-icon.svg'
+
+// const { headline, headlineAccent, description, image, imageAlt} = Astro.props;
+const props = Astro.props;
+---
+
+<style>
+.one-column-wrapper {
+    padding: 80px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) { 
+    .second-section {
+        flex-direction: column;
+    }
+}
+
+.first-section {
+    text-align: center;
+}
+
+.second-section {
+    display: flex;
+}
+
+.headline--underline::after {
+  content: "";
+  width: 64px;
+  height: 2px;
+  /* background-color: var(--c-title-underline-color); */
+  background: var(--primary-color);
+  position: absolute;
+  bottom: -15px;
+  left: 45%;
+}
+
+</style>
+
+
+<div class="one-column-wrapper">
+    <div class="first-section margin-top-30">
+        <h2 class="headline-secondary headline--underline"><span class="headline--bold">{props.headlineAccent}</span> {props.headline}</h2>
+        <p class="paragraph">{props.description}</p>
+        <p class="paragraph paragraph-second">{props.descriptionSecond}</p>
+        <p class="paragraph paragraph-third paragraph--bold">{props.descriptionThird}</p>
+    </div>
+
+    <div class="second-section">
+
+        <IconBorderBox  
+            image={PasswordIcon.src} 
+            imageAlt="Password Icon" 
+            headline="Dostępność danych" 
+        />
+        <IconBorderBox  
+            image={PasswordIcon.src} 
+            imageAlt="Password Icon" 
+            headline="Ciągłości" 
+        />
+        <IconBorderBox  
+            image={PasswordIcon.src} 
+            imageAlt="Password Icon" 
+            headline="Poufność" 
+        />
+        <IconBorderBox  
+            image={PasswordIcon.src} 
+            imageAlt="Password Icon" 
+            headline="Świadomości uzytkowników" 
+        />
+        <IconBorderBox  
+            image={PasswordIcon.src} 
+            imageAlt="Password Icon" 
+            headline="Ochrony" 
+        />
+    
+</div>
