@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import ArrowInCircle from "../assets/arrow-in-circle.svg"
 
 // const { headline, headlineAccent, description, image, imageAlt} = Astro.props;
 const props = Astro.props;
@@ -8,17 +9,38 @@ const props = Astro.props;
 <style>
 
 .content-box {
+    position: relative;
     width: 323px;
+    height: 293px;
     margin-right: 20px;
     margin-bottom: 18px;
 }
 
+.content-box:hover  {
+    border-radius: 5px;
+    border: 1px solid #00EAC7;
+
+}
+.content-box:hover  .content-box-button-icon-background {
+    fill: rgb(0, 234, 199);
+}
+.content-box:hover  .content-box-button-icon {
+    opacity: 1;
+}
+
+.content-box .paragraph {
+    height: 58px;
+    margin-top: 5px;
+}
+
 .content-box--bordered {
-    border: solid 1px #00EAC7;
+    border: 1px solid rgba(0, 234, 199, 0.20);
+    
 }
 
 .content-box-insides {
     padding: 23px;
+    
 }
 
 .content-box-icon {
@@ -28,6 +50,22 @@ const props = Astro.props;
     margin-top: 35px;
 }
 
+.button-icon-on-the-edge {
+    position: absolute;
+    right: 48px;
+}
+.content-box-button-icon-background {
+    position: absolute;
+    top: -10px;
+    fill: rgba(0, 234, 199, 0.20);
+}
+.content-box-button-icon {
+    position: absolute;
+    right: -25px;
+    top: -1px;
+    opacity: 0.5;
+}
+
 
 </style>
 
@@ -35,7 +73,12 @@ const props = Astro.props;
     <div class="content-box-insides">
         <img class="content-box-icon" src={props.image} alt={props.imageAlt} />
         <h4 class="headline headline--small">{props.headline}</h2>
-        <p class="paragraph paragraph--small">{props.description}</p>
-        <span> Button</span>
+        <p class="paragraph paragraph--small">{props.description}</p>    
     </div> 
+    <div class="button-icon-on-the-edge">
+        <svg class="content-box-button-icon-background" xmlns="http://www.w3.org/2000/svg" width="49" height="32" viewBox="0 0 49 32" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M49 9.53674e-06L49 32L15.9999 32C7.16335 32 -7.69202e-05 24.8366 -7.76927e-05 16C-7.84652e-05 7.16345 7.16337 1.31942e-05 15.9999 1.24217e-05L49 9.53674e-06Z" />
+        </svg>
+        <img class="content-box-button-icon" src={ArrowInCircle.src} alt="Arrow in circle" />
+    </div>
 </div>

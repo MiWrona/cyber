@@ -190,7 +190,6 @@ a:focus {
   color: var(--tetriary-color);
   font-family: var(--primary-font-family);
   font-size: 18px;
-  font-style: normal;
   font-weight: 300;
   line-height: 27px; /* 150% */
   letter-spacing: 0.64px;
