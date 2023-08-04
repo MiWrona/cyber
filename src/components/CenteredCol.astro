@@ -33,9 +33,10 @@ const props = Astro.props;
 
 .second-section {
     display: flex;
+    justify-content: center;
 }
 
-.headline--underline::after {
+.headline--underline--center::after {
   content: "";
   width: 64px;
   height: 2px;
@@ -51,7 +52,7 @@ const props = Astro.props;
 
 <div class="one-column-wrapper">
     <div class="first-section margin-top-30">
-        <h2 class="headline-secondary headline--underline"><span class="headline--bold">{props.headlineAccent}</span> {props.headline}</h2>
+        <h2 class="headline-secondary headline--underline--center"><span class="headline--bold">{props.headlineAccent}</span> {props.headline}</h2>
         <p class="paragraph">{props.description}</p>
         <p class="paragraph paragraph-second">{props.descriptionSecond}</p>
         <p class="paragraph paragraph-third paragraph--bold">{props.descriptionThird}</p>
